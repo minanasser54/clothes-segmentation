@@ -1,3 +1,30 @@
+# Dataset
+# data/*
+
+# Models
+# models/*.pth
+# models/*.pt
+# models/*.onnx
+
+# Results
+# results/predictions/*
+# results/large_outputs/*
+
+# Python
+# __pycache__/
+# *.pyc
+
+# Jupyter
+# .ipynb_checkpoints/
+
+# Environment
+# .env
+# venv/
+# .venv/
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
