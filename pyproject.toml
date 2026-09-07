@@ -1,20 +1,27 @@
 [project]
 name = "clothes-segmentation"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Semantic segmentation model for separating worn clothing from people in images (Computer Vision Assignment CVCY002)"
 readme = "README.md"
 authors = [
-    { name = "Mina_Nasser", email = "mina.nasser54@gmail.com" }
+    { name = "Mina Nasser", email = "mina.nasser54@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "numpy>=2.5.2",
-    "pandas>=3.0.5",
+    "tensorflow>=2.16",
+    "numpy>=1.26,<2.0",
+    "pandas>=2.2",
+    "opencv-python>=4.9",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "kagglehub>=0.2",
+    "tqdm>=4.66",
 ]
 
-[project.scripts]
-clothes-segmentation = "clothes_segmentation:main"
+[project.optional-dependencies]
+dev = [
+    "tensorboard>=2.16",
+]
 
-[build-system]
-requires = ["uv_build>=0.12.10,<0.13.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = false
