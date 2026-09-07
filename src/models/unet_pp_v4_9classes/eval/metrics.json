@@ -1,0 +1,57 @@
+{
+  "checkpoint": "/content/drive/MyDrive/Colab Notebooks/clothes-segmentation/models/unet_pp_v4_9classes/best_model.weights.h5",
+  "data_dir": "1_processed",
+  "num_test_pairs": 100,
+  "num_classes": 9,
+  "overall_miou": 0.5533478230906499,
+  "foreground_miou": 0.501738460298278,
+  "mean_dice": 0.6746336391095226,
+  "pixel_accuracy": 0.9067420959472656,
+  "per_class_metrics": {
+    "background": {
+      "iou": 0.9662227254296253,
+      "dice": 0.9828212368143623,
+      "present_in_test_set": true
+    },
+    "upper_clothes": {
+      "iou": 0.5329771345893535,
+      "dice": 0.6953490989050203,
+      "present_in_test_set": true
+    },
+    "lower_clothes": {
+      "iou": 0.4934704923063657,
+      "dice": 0.6608372844973983,
+      "present_in_test_set": true
+    },
+    "dress": {
+      "iou": 0.27371485393140166,
+      "dice": 0.4297898436004941,
+      "present_in_test_set": true
+    },
+    "shoes": {
+      "iou": 0.709085328422345,
+      "dice": 0.829783412952121,
+      "present_in_test_set": true
+    },
+    "accessories": {
+      "iou": 0.42209218209063193,
+      "dice": 0.5936214085223505,
+      "present_in_test_set": true
+    },
+    "skin": {
+      "iou": 0.7593658631667858,
+      "dice": 0.8632267785393524,
+      "present_in_test_set": true
+    },
+    "hair": {
+      "iou": 0.728171831521071,
+      "dice": 0.8427076732065027,
+      "present_in_test_set": true
+    },
+    "suit": {
+      "iou": 0.0950299963582696,
+      "dice": 0.17356601494810173,
+      "present_in_test_set": true
+    }
+  }
+}
