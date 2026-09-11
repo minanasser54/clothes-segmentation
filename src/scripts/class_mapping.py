@@ -89,12 +89,6 @@ for _orig_id, _super_id in CLASS_TO_SUPERCLASS.items():
 
 
 def remap_mask(mask):
-    """Remap a mask array of original 59-class ids to 9-superclass ids.
-    Args:
-        mask: numpy array of any shape, dtype uint8, values in [0, 58].
-    Returns:
-        numpy array of the same shape, dtype uint8, values in [0, 8].
-    """
     mask = np.asarray(mask)
     if mask.max() > 58:
         raise ValueError(
@@ -105,7 +99,6 @@ def remap_mask(mask):
 
 
 def load_superclass_names(as_list=True):
-    """Return superclass names, ordered by id 0..NUM_SUPERCLASSES-1."""
     names = [SUPERCLASS_NAMES[i] for i in range(NUM_SUPERCLASSES)]
     return names if as_list else SUPERCLASS_NAMES
 

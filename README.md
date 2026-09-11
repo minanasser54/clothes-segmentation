@@ -11,7 +11,6 @@ clothes-segmentation/
 ├── pyproject.toml           # uv-managed dependencies
 ├── uv.lock
 ├── README.md                # this file
-├── REPORT.md                # architecture, loss, evaluation, limitations
 ├── src/
 │   ├── scripts/
 │   │   ├── configs.py            # all fixed project settings (paths, image size, etc.)
@@ -24,7 +23,7 @@ clothes-segmentation/
 │   │   ├── eval.py                # test-set evaluation (mIoU, Dice, pixel accuracy)
 │   │   └── inference.py           # single-image prediction
 │   ├── Data/                     # generated locally, not committed (see .gitignore)
-│   └── models/                   # generated locally, not committed (see .gitignore)
+│   └── models/                   
 ```
 
 ## Local setup (Windows)
@@ -106,7 +105,6 @@ in-memory hand-off between scripts.
 | `--data-dir` | `2_augmented` | Which `Data/` subfolder to train from |
 | `--architecture` | `unet_plus_plus` | `unet` or `unet_plus_plus` |
 | `--resume-from` | — | Path to a checkpoint to resume training from |
-| `--cache-to-disk` | off | Cache decoded images to local disk instead of RAM (use if you hit an OOM error) |
 | `--early-stopping-patience` | 10 | Epochs without improvement before stopping |
 | `--log-every-n-steps` | 10 | In-epoch progress logging frequency |
 
@@ -129,8 +127,6 @@ The final model (`unet_plus_plus`, 9-superclass labels, 256×256 input) reached:
 - **val_mean_iou (best checkpoint, epoch 28/38): 0.560**
 - **val_accuracy (best checkpoint): 0.910**
 
-Full metrics (including per-class breakdown) are in `REPORT.md`.
+Full metrics (including per-class breakdown) are in `REPORT.pdf`.
 
-## See also
 
-`REPORT.md` covers dataset choice, architecture rationale, loss function design (including a bug found and fixed in the Dice loss implementation), full evaluation results, and known system limitations.

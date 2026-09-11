@@ -1,11 +1,10 @@
 """
 inference.py
-
 Usage:
-    python inference.py --run-name unet_v1 --image path/to/photo.jpg
+    python inference.py --run-name unet_pp_v4_9classes --image path/to/photo.jpg
 
     # custom checkpoint / output location:
-    python inference.py --run-name unet_v1 --checkpoint final_model.weights.h5 \\
+    python inference.py --run-name unet_pp_v4_9classes --checkpoint final_model.weights.h5 \\
         --image path/to/photo.jpg --output path/to/save_mask.png
 """
 

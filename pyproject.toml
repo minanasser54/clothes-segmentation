@@ -21,7 +21,10 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "tensorboard>=2.16",
+    "ipykernel>=7.3.0",
+
 ]
 
 [tool.uv]
 package = false
+
